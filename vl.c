@@ -4418,6 +4418,7 @@ int main_aux(int argc, char **argv, char **envp, PandaMainMode pmm)
         mask = qemu_str_to_log_mask(log_mask);
         if (!mask) {
             qemu_print_log_usage(stdout);
+            fprintf(f, "vl.c error!!\n");
             exit(1);
         }
         qemu_set_log(mask);
