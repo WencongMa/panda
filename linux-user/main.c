@@ -3845,6 +3845,7 @@ static void handle_arg_log(const char *arg)
     mask = qemu_str_to_log_mask(arg);
     if (!mask) {
         qemu_print_log_usage(stdout);
+	fprintf(f, "linux-user/main.c error!!\n");
         exit(EXIT_FAILURE);
     }
     qemu_log_needs_buffers();
